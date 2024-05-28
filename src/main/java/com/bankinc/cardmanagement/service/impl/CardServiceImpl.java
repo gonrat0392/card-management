@@ -4,6 +4,7 @@ import com.bankinc.cardmanagement.dto.GenerateCardRequestDTO;
 import com.bankinc.cardmanagement.entity.Card;
 import com.bankinc.cardmanagement.repository.CardRepository;
 import com.bankinc.cardmanagement.service.CardService;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +13,7 @@ import java.util.Optional;
 import java.util.Random;
 
 @Service
+@AllArgsConstructor
 public class CardServiceImpl implements CardService {
 
     @Autowired

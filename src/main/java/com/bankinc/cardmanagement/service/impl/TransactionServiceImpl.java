@@ -33,7 +33,7 @@ public class TransactionServiceImpl implements TransactionService {
         if (card == null) {
             throw new Exception("Tarjeta no encontrada");
         }
-        if (card.isActive() || card.isBlocked()) {
+        if (!card.isActive() || card.isBlocked()) {
             throw new Exception("Tarjeta inactiva o bloqueada");
         }
         if (card.getExpirationDate().isBefore(LocalDateTime.now().toLocalDate())) {
